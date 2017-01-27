@@ -1,0 +1,1 @@
+angular.module('championshipApp', ['appServices','appControllers','appDirectives','ngRoute']);
