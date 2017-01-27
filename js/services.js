@@ -6,7 +6,7 @@ angular.module('appServices', []).
     ergastAPI.getDrivers = function() {
       return $http({
         method: 'GET', 
-        url: $sce.trustAsResourceUrl('http://ergast.com/api/f1/2013/driverStandings.json')
+        url: $sce.trustAsResourceUrl('https://bartmr.github.io/my_first_angular_app/driverStandingsData.json')
       });
     }
 
