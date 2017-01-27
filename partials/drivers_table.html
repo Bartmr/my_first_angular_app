@@ -9,8 +9,10 @@
     <tr ng-repeat="driver in driversList">
         <td><span class="badge" style="font-size: 100%;">{{$index + 1}}</span></td>
         <td>
+            <a href="{{driver.Driver.url}}"
             <div class="chip" style="font-size: 100%;">
-                <img ng-src="img/flags/{{driver.Driver.nationality}}.png"> {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                <img ng-src="img/flags/{{driver.Driver.nationality}}.png"> {{driver.Driver.givenName}}&nbsp;
+                {{driver.Driver.familyName}}
             </div>
         </td>
         <td style="font-size: 100%;">{{driver.Constructors[0].name}}</td>
