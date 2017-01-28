@@ -1,1 +1,1 @@
-angular.module('championshipApp', ['appServices','appControllers','appDirectives','ngRoute']);
+angular.module('championshipApp', ['appServices','appControllers','appDirectives']);
