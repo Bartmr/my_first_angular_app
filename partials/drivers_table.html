@@ -1,5 +1,5 @@
 <div id="drivers_table" class="container">
-    <table class="card white centered highlight responsive-table">
+    <table class="card white centered highlight">
         <thead>
             <tr>
                 <th colspan="4" class="teal-text text-darken-3" style="font-size: 100%;">Driver Championship Standings</th>
@@ -7,7 +7,7 @@
 </thead>
 <tbody>
     <tr ng-repeat="driver in driversList">
-        <td><span class="badge" style="font-size: 100%;">{{$index + 1}}</span></td>
+        <td><span class="new badge text-darken-3" style="font-size: 100%;">{{$index + 1}}</span></td>
         <td>
             <a href="{{driver.Driver.url}}"
             <div class="chip" style="font-size: 100%;">
@@ -15,8 +15,6 @@
                 {{driver.Driver.familyName}}
             </div>
         </td>
-        <td style="font-size: 100%;">{{driver.Constructors[0].name}}</td>
-        <td style="font-size: 100%;">{{driver.points}}</td>
     </tr>
 </tbody>
 </table>
