@@ -10,6 +10,13 @@ angular.module('appServices', []).
       });
     }
 
+    ergastAPI.getDriverDetails = function(id) {
+      return $http({
+        method: 'JSONP', 
+        url: $sce.trustAsResourceUrl('http://ergast.com/api/f1/2013/drivers/'+ id +'/driverStandings.json')
+      });
+    }
+
     return ergastAPI;
 
   });

@@ -1,0 +1,20 @@
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav" style="color: lightgray; padding-top: 30px">
+    <li>
+      <img ng-show="driver" ng-src="img/drivers/{{driver.Driver.driverId}}.png" style="border-radius: 10px;" width="150px"/>
+    </li>
+    <li>
+        
+      <h4><img ng-show="driver" ng-src="img/flags/{{driver.Driver.nationality}}.png">  {{driver.Driver.givenName}} {{driver.Driver.familyName}}</h4>
+    </li>
+    <li>
+      <h4>{{driver.Driver.dateOfBirth}}</h4>
+    </li>
+    <li>
+      <h4>{{driver.Constructors[0].name}}</h4>
+    </li>
+    <li>
+      <a href="{{driver.Driver.url}}" target="_blank">Biography --></a>
+    </li>
+  </ul>
+</div>

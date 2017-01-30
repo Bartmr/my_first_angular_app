@@ -1,0 +1,23 @@
+<div  id="page-content-wrapper">
+    <!-- Default panel contents -->
+    <h4 align="center"><b>Drivers Championship Standings</b></h4>
+    <div style="padding-top: 10px; padding-bottom: 10px; padding-left:10px">
+        <input type="text" ng-model="nameFilter" placeholder="Search..." />
+    </div>
+
+    <!-- Table -->
+    <table class="table table-striped">
+        <tbody>
+            <tr ng-repeat="driver in driversList | filter: searchFilter">
+                <td style="padding-left: 80px">{{$index + 1}}</td>
+                <td><img ng-src="img/flags/{{driver.Driver.nationality}}.png" /> 
+                    <a href="#" ng-click="driversTableCtrl.showDriverInfo(driver.Driver.driverId)">
+                        {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
+                    </a>
+                </td>
+                <td>{{driver.Constructors[0].name}}</td>
+                <td>{{driver.points}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
